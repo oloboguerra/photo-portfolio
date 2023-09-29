@@ -38,22 +38,24 @@
             border-radius: 5px;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
             position: absolute;
-            display: grid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 30%;
-            width: 45%;
+            width: 40%;
             left: 30%;
             top: 30%;
-            overflow: auto;
         }
 
         #box-text {
-            position: relative;
             width: 100%;
+            height: auto;
+            margin-bottom: 10%;
         }
 
         h1 {
             color: antiquewhite;
-            font-size: 3rem;
+            font-size: 3em;
             line-height: normal;
             text-align: center;
             text-shadow: rgba(0, 0, 0, 0.4) 0px 7px 5px;
@@ -61,24 +63,47 @@
 
         p {
             color: antiquewhite;
-            font-size: 1.2rem;
+            font-size: 1.2em;
             line-height: normal;
             text-align: center;
         }
 
         button {
-            font-size: 1rem;
+            font-size: 1em;
+            line-height: normal;
+            padding: 8px;
             border-radius: 5px;
+            margin: 0;
+            position: relative;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, 5px);
             background-color: black;
             color: aliceblue;
-            left: 40%;
-            top: 5%;
-            position: relative;
         }
 
         a {
             text-decoration: none;
             color: antiquewhite;
+        }
+
+        @media screen and (max-width: 940px) {
+            #welcome-box {
+                width: fit-content;
+                height: max-content;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            #welcome-box {
+                left: 20%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #welcome-box {
+                left: 10%;
+            }
         }
     </style>
 </head>
