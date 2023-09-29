@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="portfolio" content="oloboguerra's Portfolio">
+    <link rel="icon"
+        href="https://static.wixstatic.com/media/939ff4_c904687b38b6438a9b7d487fb13d50e7~mv2.png">
+    <link rel="shortcut icon"
+        href="https://static.wixstatic.com/media/939ff4_c904687b38b6438a9b7d487fb13d50e7~mv2.png"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
+        href="https://static.wixstatic.com/media/939ff4_c904687b38b6438a9b7d487fb13d50e7~mv2.png"
+        type="image/x-icon">
+    <link rel="icon"
+        href="https://static.wixstatic.com/media/939ff4_c904687b38b6438a9b7d487fb13d50e7~mv2.png"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lightbox.css">
+
+    <style>
+        body {
+            background-image: url(https://static.wixstatic.com/media/939ff4_25a01645b60041d1b4d9c2be01341625~mv2.png);
+            background-size: cover;
+        }
+
+        .header {
+            border-radius: 10px;
+            border: solid black;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            overflow: auto;
+            background-color: rgba(152, 29, 214, 0.2);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #3D0E61;
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: antiquewhite;
+        }
+
+        .inner_header {
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        #hamburger-menu {
+            display: none;
+        }
+
+        .logo_container h1 {
+            color: antiquewhite;
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 1.3em;
+            font-family: 'Dancing Script', cursive, sans-serif;
+        }
+
+        .navigation {
+            color: antiquewhite;
+            margin: auto;
+        }
+
+        .navigation a {
+            height: 100%;
+            display: table;
+            float: left;
+            padding: 10px;
+        }
+
+        .navigation a li {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            font-size: 16px;
+        }
+
+        #title {
+            color: antiquewhite;
+            text-align: center;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .mother {
+            margin: 0 auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: right;
+            width: 30%;
+            padding: 5px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        img {
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 940px) {
+
+            .header {
+                overflow-y: hidden;
+            }
+
+            .logo_container {
+                padding-right: 100px;
+            }
+
+            .navigation {
+                display: none;
+            }
+
+            #hamburger-menu {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                margin: auto;
+                border: none;
+                background: linear-gradient(to bottom,
+                        antiquewhite, antiquewhite 20%,
+                        rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%,
+                        antiquewhite 40%, antiquewhite 60%,
+                        rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%,
+                        antiquewhite 80%, antiquewhite 100%);
+            }
+
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .35s, visibility .35s, height .35s;
+                overflow: hidden;
+                background: black;
+                z-index: -1;
+            }
+
+            #main-menu {
+                display: block;
+                height: 100px;
+                width: 100%;
+                background: #3D0E61;
+                margin: 0px;
+                z-index: 9;
+            }
+
+            #main-menu ul {
+                max-width: 800px;
+                width: 100%;
+                height: 100%;
+                margin: 0px auto;
+                padding: 0px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                z-index: 9;
+            }
+
+            #main-menu li {
+                list-style-type: none;
+                font-size: 2rem;
+            }
+
+            #main-menu a {
+                color: #B9FAF8;
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+
+            #main-menu a:hover {
+                text-decoration: underline;
+            }
+
+            #hamburger-menu {
+                margin: auto;
+                font-family: 'Gill Sans', sans-serif;
+                background: linear-gradient(to bottom,
+                        antiquewhite, antiquewhite 20%,
+                        rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%,
+                        antiquewhite 40%, antiquewhite 60%,
+                        rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%,
+                        antiquewhite 80%, antiquewhite 100%);
+            }
+
+            #hamburger-menu #sidebar-menu {
+                visibility: hidden;
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 200px;
+                height: 100%;
+                background-color: black;
+                transition: 0.3s;
+                padding: 0px 10px;
+                box-sizing: border-box;
+            }
+
+            #hamburger-menu h3 {
+                color: antiquewhite;
+                font-size: 2.2rem;
+            }
+
+            #hamburger-menu ul {
+                padding-left: 0px;
+            }
+
+            #hamburger-menu li {
+                list-style-type: none;
+                line-height: 3rem;
+            }
+
+            #hamburger-menu a {
+                color: #f6ff00;
+                font-size: 1.3rem;
+                text-decoration: none;
+            }
+
+            #hamburger-menu a:hover {
+                text-decoration: underline;
+            }
+
+            #hamburger-input {
+                display: none;
+            }
+
+            #hamburger-input:checked+#hamburger-menu #sidebar-menu {
+                visibility: visible;
+                left: 0;
+            }
+
+            #hamburger-input:checked~.overlay {
+                visibility: visible;
+                opacity: 0.4;
+            }
+
+            .column {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        footer {
+            border-radius: 10px;
+            border: solid black;
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-color: rgba(152, 29, 214, 0.2);
+        }
+
+        .social_media {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .socialIcon {
+            width: 35px;
+            height: 35px;
+            padding: 0px 25px 0px 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1><a href="index.html"><strong>@oloboguerra's<br>Portfolio</strong></a></h1>
+            </div>
+
+            <label id="hamburger-menu">
+                <input type="checkbox" id="hamburger-input" class="burger-shower" />
+                <label id="hamburger-menu" for="hamburger-input">
+                    <nav id="sidebar-menu">
+                        <h3>Menu</h3>
+                        <ul>
+                            <a href="originalPortfolioLandscapes.html">
+                                <li>LANDSCAPES</li>
+                            </a>
+                            <a href="originalPortfolioPortraits.html">
+                                <li>PORTRAITS</li>
+                            </a>
+                            <a href="originalPortfolioArch.html">
+                                <li>REAL-ESTATE</li>
+                            </a>
+                            <a href="originalPortfolioFoods.html">
+                                <li>FOODS</li>
+                            </a>
+                            <a href="originalPortfolioEvents.html">
+                                <li>EVENTS</li>
+                            </a>
+                            <a href="originalPortfolioContact.html">
+                                <li>CONTACT</li>
+                        </ul>
+                    </nav>
+                </label>
+                <div class="overlay"></div>
+            </label>
+
+            <ul class="navigation">
+                <a href="originalPortfolioLandscapes.html">
+                    <li>LANDSCAPES</li>
+                </a>
+                <a href="#">
+                    <li>PORTRAITS</li>
+                </a>
+                <a href="originalPortfolioArch.html">
+                    <li>ARCHITECTURE/REAL-ESTATE</li>
+                </a>
+                <a href="originalPortfolioFoods.html">
+                    <li>FOODS</li>
+                </a>
+                <a href="originalPortfolioEvents.html">
+                    <li>EVENTS</li>
+                </a>
+                <a href="originalPortfolioContact.html">
+                    <li>CONTACT</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <h1 id="title"><em>Portraits</em></h1>
+    <div class="mother">
+
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_1dc1494111074fb48e0076c2be56ce16~mv2.jpeg"
+                    data-lightbox="Portraits" data-title="A Group of Friends">
+                    <img src="https://static.wixstatic.com/media/939ff4_1dc1494111074fb48e0076c2be56ce16~mv2.jpeg"
+                        alt="A Group of Friends"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_d8b629ebcbed4ce8be20247c8580ad62~mv2.jpeg"
+                    data-lightbox="Portraits" data-title="Woman Standing in front of Drums">
+                    <img src="https://static.wixstatic.com/media/939ff4_d8b629ebcbed4ce8be20247c8580ad62~mv2.jpeg"
+                        alt="Woman Standing in front of Drums"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_6421f7e7b9954a9182e2552c7af7ca81~mv2.jpeg"
+                    data-lightbox="Portraits" data-title="Couple Kiss">
+                    <img src="https://static.wixstatic.com/media/939ff4_6421f7e7b9954a9182e2552c7af7ca81~mv2.jpeg"
+                        alt="Couple Kiss"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_12a6a24d12634bb28e28c2565a9e0d58~mv2.jpg"
+                    data-lightbox="Portraits" data-title="Artists Hanging Around">
+                    <img src="https://static.wixstatic.com/media/939ff4_12a6a24d12634bb28e28c2565a9e0d58~mv2.jpg"
+                        alt="Artists Hanging Around"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_9c25154f355e45e795c9ad69ca235116~mv2.jpg"
+                    data-lightbox="Portraits" data-title="Couple Cheerin' Up">
+                    <img src="https://static.wixstatic.com/media/939ff4_9c25154f355e45e795c9ad69ca235116~mv2.jpg"
+                        alt="Couple Cheerin' Up"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_b357932cbc7b4bb4a71fafbb55e2c12c~mv2.jpg"
+                    data-lightbox="Portraits" data-title="Guy in a Skeleton Suit sends an OK sign">
+                    <img src="https://static.wixstatic.com/media/939ff4_b357932cbc7b4bb4a71fafbb55e2c12c~mv2.jpg"
+                        alt="Guy in a Skeleton Suit sends an OK sign"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_d6d6cdd49bce4e6f9c93400f266627fa~mv2.jpg"
+                    data-lightbox="Portraits" data-title="Shy Girl">
+                    <img src="https://static.wixstatic.com/media/939ff4_d6d6cdd49bce4e6f9c93400f266627fa~mv2.jpg"
+                        alt="Shy Girl"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_b56373c0d9d44b5aa1656d3c2eb4ece9~mv2.jpeg"
+                    data-lightbox="Portraits" data-title="B&W Portrait">
+                    <img src="https://static.wixstatic.com/media/939ff4_b56373c0d9d44b5aa1656d3c2eb4ece9~mv2.jpeg"
+                        alt="B&W Portrait"></a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <a href="https://static.wixstatic.com/media/939ff4_19c855ed549f426e86a68e8001390103~mv2.jpeg"
+                    data-lightbox="Portraits" data-title="Serenade Moment">
+                    <img src="https://static.wixstatic.com/media/939ff4_19c855ed549f426e86a68e8001390103~mv2.jpeg"
+                        alt="Serenade Moment"></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="social_media">
+            <a href="https://www.linkedin.com/in/felipe-lobo-guerra-3752a4140" target="_blank"><img
+                    src="socialIcons/Linkedin-icon.png" class="socialIcon"></a>
+            <a href="https://www.instagram.com/oloboguerra" target="_blank"><img src="socialIcons/instagram-icon.png"
+                    class="socialIcon"></a>
+            <a href="https://www.twitch.tv/alfoet" target="_blank"><img src="socialIcons/twitch-icon.png"
+                    class="socialIcon"></a>
+            <a href="https://www.youtube.com/channel/UCXukwTyphLjJ-haGKbysWQw" target="_blank"><img
+                    src="socialIcons/Youtube-icon.png" class="socialIcon"></a>
+        </div>
+    </footer>
+    <script src="lightbox-plus-jquery.js"></script>
+</body>
+
+</html>
