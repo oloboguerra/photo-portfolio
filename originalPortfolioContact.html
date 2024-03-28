@@ -21,6 +21,7 @@
         body {
             background-image: url(images/Background\ Image\ Canvas\ Major.jpg);
             background-size: cover;
+            text-shadow: 2px 2px black;
         }
 
         .header {
@@ -49,21 +50,19 @@
             justify-content: space-around;
         }
 
-        .logo_container h1 {
-            color: antiquewhite;
-            width: 100%;
-            display: table-cell;
-            vertical-align: middle;
-            font-size: 1.3em;
-            font-family: 'Dancing Script', cursive, sans-serif;
-        }
-
         #hamburger-menu {
             display: none;
         }
 
+        #Logo {
+            width: 70px;
+            height: 70px;
+            float: left;
+        }
+
         .navigation {
             color: antiquewhite;
+            margin: auto;
         }
 
         .navigation a {
@@ -83,56 +82,50 @@
         #title {
             color: antiquewhite;
             text-align: center;
-            margin: 3% 0 2%;
-        }
-
-        #sub {
-            color: antiquewhite;
-            text-align: center;
-        }
-
-
-        button {
-            background-color: #9108d1b5;
-            color: white;
-            padding: 10px;
-            border: solid 2px black;
-            cursor: pointer;
-            border-radius: 10px;
             margin: auto;
+            padding: 30px;
+        }
+
+        .mother {
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+            color: antiquewhite;
         }
 
-        button:hover {
-            background-color: #cf0be0af;
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: right;
+            width: 30%;
+            padding: 5px;
         }
 
-        footer {
-            margin-top: 5%;
+        .content {
+            padding: 20px;
         }
 
-        #ouroboros {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 5%;
-            width: 50%;
+        img {
+            border-radius: 5px;
+            width: 100%;
         }
 
-        .image-box {
-            right: 5%;
-        }
-
-
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-
-        @media screen and (max-width: 930px) {
-
-            #title {
-                margin-top: 10%;
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+            .column {
+                width: 50%;
             }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 940px) {
 
             .header {
                 overflow-y: hidden;
@@ -273,8 +266,14 @@
                 opacity: 0.4;
             }
 
+            .column {
+                width: 100%;
+                margin-top: 0;
+            }
+
             footer {
-                margin-top: 25%;
+                right: 5px;
+
             }
         }
 
@@ -282,9 +281,17 @@
             border-radius: 10px;
             border: solid black;
             width: 100%;
-            height: 80px;
+            height: 90px;
             position: relative;
             background-color: rgba(152, 29, 214, 0.2);
+            margin-top: 18%;
+        }
+
+        #trademark {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            text-shadow: 0.2px 0.2px 4px antiquewhite;
         }
 
         .social_media {
@@ -299,6 +306,16 @@
             margin: 0 20px;
         }
 
+        button {
+            background-color: rgb(98, 5, 144);
+            width: 50%;
+            border-radius: 5px;
+            color: antiquewhite;
+            font-size: 0.9em;
+            cursor: pointer;
+            box-shadow: 3px 3px black;
+        }
+
         a {
             text-decoration: none;
             color: antiquewhite;
@@ -311,7 +328,9 @@
     <div class="header">
         <div class="inner_header">
             <div class="logo_container">
-                <h1><a href="index.html"><strong>@oloboguerra's<br>Portfolio</strong></a></h1>
+                <div id="Logo"><a href="index.html"><img
+                            src="https://static.wixstatic.com/media/939ff4_c904687b38b6438a9b7d487fb13d50e7~mv2.png"></a>
+                </div>
             </div>
 
             <label id="hamburger-menu">
@@ -366,11 +385,29 @@
         </div>
     </div>
     <h1 id="title"><em>Contact</em></h1>
-    <h2 id="sub"><em>Schedule Your Session!</em></h2>
 
-    <img id="ouroboros" src="https://static.wixstatic.com/media/939ff4_c904687b38b6438a9b7d487fb13d50e7~mv2.png">
+    <div class="mother">
+        <div class="column">
+            <div class="content">
+                <h2>If you need a...</h2>
+                <ul>
+                    <li>Videographer;</li>
+                    <li>Photographer;</li>
+                    <li>Graphic Designer;</li>
+                    <li>Video Editor;</li>
+                    <li>Photo Editor</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h2>Then Give me a Call!</h2>
+                <p>Send your proposal to me, with only a click of a button away:</p>
+                <a href="mailto:oloboguerra@lentevegana.com"><button>E-mail me!</button></a>
+            </div>
+        </div>
+    </div>
 
-    <a href="mailto:oloboguerra@lentevegana.com"><button>E-mail me</button></a>
     <footer>
         <div class="social_media">
             <a href="https://www.linkedin.com/in/felipe-lobo-guerra-3752a4140" target="_blank"><img
@@ -384,6 +421,7 @@
             <a href="https://www.youtube.com/channel/UC5_HNPdzuHV4Tx8LexDRX6Q" target="_blank"><img
                     src="socialIcons/youtube.svg" class="socialIcon"></a>
         </div>
+        <div id="trademark">Lente Vegana&trade;</div>
     </footer>
 </body>
 
