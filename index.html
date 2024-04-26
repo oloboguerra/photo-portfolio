@@ -19,18 +19,22 @@
     <style>
         body {
             font-family: 'Playfair Display', serif;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(29, 1, 62, 1) 48%, rgba(83, 0, 156, 1) 100%);
         }
 
-        html {
-            background-image: url(images/Background.png);
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+        #myVideo {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 100%;
         }
 
         #welcome-box {
-            background-color: rgba(145, 21, 212, 0.5);
+            background-color: rgba(44, 5, 65, 0.671);
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
             position: absolute;
@@ -75,7 +79,7 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, 5px);
             background-color: black;
-            color: aliceblue;
+            color: rgba(18, 7, 171, 0.547);
         }
 
         a {
@@ -83,6 +87,29 @@
             color: antiquewhite;
         }
 
+        @media (min-aspect-ratio: 5/4) {
+            .Vertical {
+                display: none;
+            }
+        }
+
+        @media (max-aspect-ratio: 5/4) {
+
+            .Vertical {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                height: 100%;
+            }
+
+            #myVideo {
+                display: none;
+            }
+
+        }
 
         @media screen and (max-width: 1380px) {
             #welcome-box {
@@ -98,6 +125,7 @@
                 height: max-content;
                 left: 30%;
             }
+
         }
 
         @media screen and (max-width: 939px) {
@@ -116,6 +144,14 @@
 </head>
 
 <body>
+    <video autoplay muted loop class="Vertical">
+        <source src="https://video.wixstatic.com/video/939ff4_40338db681814a069107030eff3bf764/720p/mp4/file.mp4"
+            type="video/mp4">
+    </video>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://video.wixstatic.com/video/939ff4_a097b9f7a211422c820b26420791181c/720p/mp4/file.mp4"
+            type="video/mp4">
+    </video>
     <div id="welcome-box">
         <div id="box-text">
             <h1>Welcome!</h1>
