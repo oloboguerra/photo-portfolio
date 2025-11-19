@@ -65,21 +65,22 @@
 
     <style>
         body {
-            font-family: "Old Standard TT", serif;
+            font-family: 'Times New Roman', Times, serif;
             background: rgb(30, 30, 30);
             background: linear-gradient(90deg, rgba(30, 30, 30, 1) 0%, rgba(89, 89, 89, 1) 25%, rgba(166, 166, 166, 1) 50%, rgba(208, 208, 208, 1) 75%, rgba(241, 239, 239, 1) 100%);
             text-shadow: 1px 0.5px black;
         }
 
         .header {
+            position: sticky;
+            top: 5px;
             border-radius: 10px;
             border: solid black;
             width: 100%;
             height: 80px;
             display: flex;
-            position: relative;
             overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(30, 30, 30, 0.85);
         }
 
         ::-webkit-scrollbar-track {
@@ -298,14 +299,14 @@
                 left: -250px;
                 width: 200px;
                 height: 100%;
-                background-color: black;
+                background-color: rgba(30, 30, 30, 0.85);
                 transition: 0.3s;
                 padding: 0px 10px;
                 box-sizing: border-box;
             }
 
             #hamburger-menu h3 {
-                color: antiquewhite;
+                color: whitesmoke;
                 font-size: 2.2rem;
             }
 
@@ -319,7 +320,7 @@
             }
 
             #hamburger-menu a {
-                color: #f6ff00;
+                color: antiquewhite;
                 font-size: 1.3rem;
                 text-decoration: none;
             }
@@ -368,7 +369,7 @@
                 </div>
             </div>
 
-            <label id="hamburger-menu">
+            <label onclick="hideShow()" id="hamburger-menu">
                 <input type="checkbox" id="hamburger-input" class="burger-shower" />
                 <label id="hamburger-menu" for="hamburger-input">
                     <nav id="sidebar-menu">
@@ -426,15 +427,6 @@
                     <img loading="eager"
                         src="https://static.wixstatic.com/media/939ff4_324589289e374629b102b1c49d16ec3b~mv2.jpeg"
                         alt="Dead Fish - Rockfun Fest 2023 (Singer Portrait)"></a>
-            </div>
-        </div>
-        <div class="column">
-            <div class="content">
-                <a href="https://static.wixstatic.com/media/939ff4_5489cf0f86014d84bca5794dc32ec5a3~mv2.png"
-                    data-lightbox="Events" data-title="Dead Fish - Rockfun Fest 2023">
-                    <img loading="eager"
-                        src="https://static.wixstatic.com/media/939ff4_5489cf0f86014d84bca5794dc32ec5a3~mv2.png"
-                        alt="Dead Fish - Rockfun Fest 2023 (Wide)"></a>
             </div>
         </div>
         <div class="column">
