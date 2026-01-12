@@ -68,7 +68,7 @@ strong {
 }
 
 footer {
-    margin: 0 auto;
+    margin: 1rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,9 +97,52 @@ button:active {
     transform: translateY(4px);
 }
 
-#bitcoin {
-    width: 50px;
-    margin: 5px;
+.column {
+    float: right;
+    width: 30%;
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+}
+
+.mother {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    box-shadow: 3px 3px 2px 0;
+    background-color: gray;
+    animation: slideInRight 1s ease-out;
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+
+    .column {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .content {
+        justify-content: center;
+    }
 }
 
 @keyframes slideInLeft {
