@@ -67,18 +67,6 @@ strong {
     margin: 10px;
 }
 
-footer {
-    margin: 1rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-radius: 15px;
-    border: solid black;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
 button {
     margin-top: 0.8rem;
     display: inline-block;
@@ -109,7 +97,7 @@ button:active {
 }
 
 .mother {
-    margin: 0 auto;
+    margin: 0 0 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
