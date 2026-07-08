@@ -5,6 +5,7 @@
 
 body {
     background-color: antiquewhite;
+    background-image: url("https://www.transparenttextures.com/patterns/white-wall.png");
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -12,8 +13,54 @@ strong {
     font-size: 1.5rem;
 }
 
+video {
+  border: solid black 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+        border-radius: 10px;
+        border: solid black;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .float-container {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .float-child {
+        width: fit-content;
+        width: max-content;
+        float: left;
+      }
+
+      .float-child2 {
+        float: left;
+        margin-top: 3rem;
+      }
+
+      #imgLogo {        
+        width: 114px;
+        height: 114px;
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 1));
+      }
+
+      #trademark {
+        color: antiquewhite;
+        font-family: "Tangerine", cursive, sans-serif;
+        font-size: 32px;
+        text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+      }   
+       
 .video-container {
     position: relative;
+    display: flex;
+    justify-content: center;
     -webkit-animation: fadein 5s;
     /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 3s;
@@ -26,14 +73,16 @@ strong {
 }
 
 #wide {
-    width: 100%;
+    width: 85%;
     border-radius: 10px;
 }
 
 .lefty {
+    overflow: auto;
     border-radius: 15px;
     box-shadow: 2px 2px 3px 2px;
-    margin: 10px;
+    padding: 0.5rem;
+    margin: 2rem;
     background-color: bisque;
     display: flex;
     align-items: center;
@@ -43,9 +92,12 @@ strong {
 }
 
 .righty {
+    overflow: auto;
     border-radius: 15px;
-    box-shadow: 3px 3px 2px 0;
-    background-color: gray;
+    box-shadow: 3px 3px 2px 2px;
+    padding: 0.5rem;
+    margin: 2rem;
+    background-color: rgb(178, 178, 178);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,10 +107,12 @@ strong {
 
 .rightP {
     margin-left: 10px;
+    word-wrap: break-word;
 }
 
 .leftP {
     margin-right: 10px;
+    word-wrap: break-word;
 }
 
 .IMG {
@@ -67,23 +121,305 @@ strong {
     margin: 10px;
 }
 
-button {
-    margin-top: 0.8rem;
-    display: inline-block;
-    font-size: 12px;
-    padding: 15px 25px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    background-color: aliceblue;
-    border-radius: 10px;
-    box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.2);
+#VERT {
+  display: none;
 }
 
-button:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+.vitrine {
+    width: 100%;
 }
+
+      /* From Uiverse.io by dopekid_9309 */ 
+.comic-brutal-button-container {
+  --primary-color: #AA4748;
+  --secondary-color: #58423F;
+  --text-color: #000000;
+  --accent-color: antiquewhite;
+  --panel-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.75);
+
+  width: 10%;
+  margin: 1.5rem;
+}
+
+.comic-brutal-button {
+  position: relative;
+  font-size: 1.5em;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transform: rotate(-2deg);
+  transform-origin: center;
+  transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.button-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.8em 1.5em;
+  z-index: 3;
+  overflow: hidden;
+  transform: skew(-1deg, 0.5deg);
+  transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+  clip-path: polygon(
+    0% 10%,
+    3% 0%,
+    97% 0%,
+    100% 10%,
+    100% 90%,
+    97% 100%,
+    3% 100%,
+    0% 90%
+  );
+}
+
+.button-text {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 5;
+  color: var(--text-color);
+  text-shadow:
+    0.05em 0.05em 0 var(--panel-color),
+    -0.05em -0.05em 0 var(--panel-color),
+    0.05em -0.05em 0 var(--panel-color),
+    -0.05em 0.05em 0 var(--panel-color);
+  transform: rotate(2deg);
+}
+
+.button-frame {
+  position: absolute;
+  top: -0.3em;
+  left: -0.3em;
+  right: -0.3em;
+  bottom: -0.3em;
+  background-color: var(--accent-color);
+  border: 0.15em solid var(--text-color);
+  z-index: 1;
+  transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.button-shadow {
+  position: absolute;
+  top: 0.4em;
+  left: 0.4em;
+  right: -0.4em;
+  bottom: -0.4em;
+  background-color: var(--shadow-color);
+  z-index: 0;
+  transition: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Halftone effect using CSS */
+.halftone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 30% 30%,
+    rgba(0, 0, 0, 0.2) 0.1em,
+    transparent 0.1em
+  );
+  background-size: 0.5em 0.5em;
+  background-position: 0 0;
+  opacity: 0.3;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+/* Ink splatter effect using CSS gradients */
+.ink-splatter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.08) 20%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.08) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 50%,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.08) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.08) 15%,
+      transparent 40%
+    );
+}
+
+/* Button hover state */
+.comic-brutal-button:hover {
+  transform: rotate(-1deg) scale(1.05);
+}
+
+.comic-brutal-button:hover .button-inner {
+  transform: skew(-5deg, 2deg);
+  background-color: var(--secondary-color);
+}
+
+.comic-brutal-button:hover .button-text {
+  color: var(--panel-color);
+  text-shadow:
+    0.05em 0.05em 0 var(--text-color),
+    -0.05em -0.05em 0 var(--text-color),
+    0.05em -0.05em 0 var(--text-color),
+    -0.05em 0.05em 0 var(--text-color);
+}
+
+.comic-brutal-button:hover .button-shadow {
+  transform: translate(0.2em, 0.2em);
+}
+
+.comic-brutal-button:hover .ink-splatter {
+  opacity: 1;
+}
+
+/* Button focus state */
+.comic-brutal-button:focus {
+  outline: none;
+}
+
+.comic-brutal-button:focus .button-frame {
+  border-color: var(--secondary-color);
+}
+
+/* Button active state */
+.comic-brutal-button:active {
+  transform: rotate(0) scale(0.98);
+}
+
+.comic-brutal-button:active .button-inner {
+  transform: skew(0, 0);
+}
+
+.comic-brutal-button:active .button-shadow {
+  transform: translate(0.1em, 0.1em);
+}
+
+/* Comic burst animation */
+@keyframes burst {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.comic-brutal-button:active .button-text {
+  animation: burst 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Add comic-style border on focus */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.comic-brutal-button:focus::after {
+  content: "";
+  position: absolute;
+  top: -0.5em;
+  left: -0.5em;
+  right: -0.5em;
+  bottom: -0.5em;
+  border: 0.15em dashed var(--text-color);
+  z-index: 0;
+  animation: dash 1s linear infinite;
+  pointer-events: none;
+}
+
+/* Additional brutalist comic book elements */
+.comic-brutal-button::before {
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  left: 0.8em;
+  width: 1em;
+  height: 1em;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.comic-brutal-button:hover::before {
+  opacity: 0.7;
+}
+
+/* Action lines on click */
+@keyframes action-lines {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+.comic-brutal-button:active::before {
+  content: "";
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  right: -1em;
+  bottom: -1em;
+  background-image: radial-gradient(var(--text-color) 0%, transparent 70%),
+    repeating-conic-gradient(
+      transparent 0%,
+      transparent 5%,
+      var(--text-color) 5%,
+      var(--text-color) 6%
+    );
+  opacity: 0;
+  z-index: 6;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  animation: action-lines 0.5s ease-out forwards;
+}
+
+#title {
+            color: black;
+            text-align: center;
+            text-shadow: 1px 2px antiquewhite;
+            margin: auto;
+            padding: 30px 0 30px 0;
+        }
 
 .column {
     float: right;
@@ -122,6 +458,14 @@ button:active {
 }
 
 @media screen and (max-width: 940px) {
+
+    .IMG {
+      display: none;
+    }
+
+    #VERT {
+      display: block;
+    }
 
     .column {
         width: 100%;
@@ -211,14 +555,18 @@ button:active {
     }
 }
 
-@media (max-aspect-ratio: 6/4) {
-    .IMG {
-        width: 45%;
-    }
+@media (max-width: 680px) {
+
+  #VERT {
+    transform: scaleY(1.3);
+  }    
+
 }
 
-@media (max-width: 720px) {
-    .IMG {
-        width: 50%;
-    }
+@media (max-width: 600px) {
+
+  #VERT {
+    transform: scaleY(1.5);
+  }    
+
 }
