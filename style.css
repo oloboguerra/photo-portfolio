@@ -35,7 +35,7 @@ footer {
 
       .float-child {
         width: fit-content;
-        width: max-content;
+        height: max-content;
         float: left;
       }
 
@@ -574,5 +574,44 @@ footer {
   #VERT {
     transform: scaleY(1.5);
   }    
+
+}
+
+@media (max-width: 489px) {
+
+  #VERT {
+    transform: scaleY(1.7);
+  }
+}
+
+@media (max-width: 474px) {
+
+  #VERT {
+    transform: scaleY(2);
+  }
+
+  .comic-brutal-button {
+  font-size: 0.6rem;
+}
+
+.float-child {
+        float: left;
+      }
+
+.float-child2 {
+  float: none;  
+  margin-top: 1.5rem;
+}
+
+#trademark {
+        font-size: 28px;
+        width: 100%;
+      } 
+
+#imgLogo {   
+        width: 80px;
+        height: 80px;     
+        padding: 0.5rem;
+      }
 
 }
