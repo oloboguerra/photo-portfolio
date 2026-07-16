@@ -121,6 +121,12 @@ footer {
     margin: 10px;
 }
 
+.expo {
+  width: 100%;
+  padding: 5px;
+  border: solid black 2px;
+}
+
 #VERT {
   display: none;
 }
